@@ -13,11 +13,11 @@ const arr = [
         age : 19
     },
     {
-        username: 'arthas',
+        username: 'Arthas',
         age : 20
     },
     {
-        username: 'Forgottenone',
+        username: 'ForgottenOne',
         age : 25
     },
     {
@@ -32,34 +32,65 @@ mainDiv.appendChild(ul);
 
 arr.forEach(item => {
     const li = document.createElement ('li');
-    li.textContent = item.age > 18 ? item.username : ""
+    li.textContent = item.age > 18 ? item.username : "not specified"
     ul.appendChild(li);
+    li.style.fontSize = '30px';
 })
 
-// function handle (arr) {
-//     let newArr = arr.filter(item => item.age > 18);
-//     return console.log(newArr)
-// }
+let btn = document.querySelector('#btn');
+let textdiv = document.querySelector('#thirdi');
+let button =document.querySelector('#btn2');
+let btn3 = document.querySelector('#btn3');
+let btn4 = document.querySelector('#btn4');
 
-const buttonDiv = document.getElementById('thirdi');
+btn.style.width = '300px';
+btn.style.height = '300px';
+btn.style.fontSize = '35px';
+btn.style.backgroundColor ="cyan";
 
-buttonDiv.style.width = '200px';
-buttonDiv.style.border =' 5px solid cyan';
-buttonDiv.style.textAlign = 'center';
+
+thirdi.style.width ='500px';
+thirdi.style.fontSize ='35px';
 
 
-const btn = document.querySelector('#btn');
-// btn.style.width = "100px";
-btn.style.backgroundcolor = 'cyan';
-btn.setAttribute('type', 'submit');
+btn.onclick = () => {
+    main.style.display = 'none';
+    
+};
 
-if (btn.getAttribute('type') === 'submit'){
-    btn.style.backgroundcolor = 'cyan';
-} else {
-    btn.getAttribute('disabled','');
-    btn.style.backgroundcolor = 'yellow';
+btn2.style.width = '300px';
+btn2.style.height = '300px';
+btn2.style.fontSize = '35px';
+btn2.style.backgroundColor ="cyan";
+
+btn2.onclick = () => {
+    main.style.display = 'block';
+};
+
+
+btn3.style.width = '300px';
+btn3.style.height = '300px';
+btn3.style.fontSize = '30px';
+btn3.style.backgroundColor ="cyan";
+
+
+btn3.onclick =() =>{
+    thirdi.style.color = 'blue';
+    thirdi.style.fontSize ='25px';
 
 }
+
+btn4.style.width = '300px';
+btn4.style.height = '300px';
+btn4.style.fontSize = '30px';
+btn4.style.backgroundColor ="cyan";
+
+btn4.onclick =() =>{
+    thirdi.style.removeProperty("color");
+    thirdi.style.fontSize = "35px";
+
+}
+
 
 
 
