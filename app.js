@@ -50,7 +50,6 @@ btn.style.backgroundColor ="cyan";
 
 
 thirdi.style.width ='500px';
-thirdi.style.fontSize ='35px';
 
 
 btn.onclick = () => {
@@ -87,7 +86,7 @@ btn4.style.backgroundColor ="cyan";
 
 btn4.onclick =() =>{
     thirdi.style.removeProperty("color");
-    thirdi.style.fontSize = "35px";
+    thirdi.style.fontSize = "";
 
 }
 
